@@ -1,0 +1,329 @@
+/*---------------------------------------
+              Main Styles
+---------------------------------------*/
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("../images/runner_bg.JPG");
+  background-position: center;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  size: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Black Ops One', 'Stardos Stencil', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+h4 {
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+p, ul, ol, table {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5em;
+}
+
+/*---------------------------------------
+              Banner Styles
+---------------------------------------*/
+.banner {
+  background: url("../images/panthereyes.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1em;
+  margin: 0; 
+}
+
+
+/*----------------------------------------
+            Nav Bar Styles
+----------------------------------------*/
+nav {
+  text-align: center;
+}
+
+nav ul {
+  margin: .2em;
+  padding: .2em;
+}
+
+nav li {
+  display: block;
+  padding: .6em .5em;
+}
+
+nav a {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #8a02c5;
+  text-transform: uppercase;
+  padding: .3em .3em;
+}
+
+nav a.selected, nav a:hover {
+  color: #000;
+  background-color: #8a02c5;
+  border-radius: 10px;
+}
+
+
+/*------------------------------------------
+                Home Page
+  Top Row: Schedule, Welcome & Sponsors
+------------------------------------------*/
+.top-info-container {
+  max-width: 1400px;
+  margin: 2em 4em;
+}
+
+.top-boxes {
+  padding: 1.2em;
+  border-radius: .3em;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.schedule {
+  flex-basis: 20%;
+}
+
+.schedule td {
+  padding: .2em .2em;
+  text-align: center;
+}
+
+.sponsors {
+  flex-basis: 20%;
+}
+
+.welcome {
+  flex-basis: 54%
+}
+
+.welcome .first::first-letter {
+    font-family: 'Tangerine', cursive;
+    font-weight: bolder;
+    font-size: 250%;
+    color: #fff;
+}
+
+.welcome img {
+  margin: .2em 1em;
+  border: 4px solid #000;
+  border-radius: 35px;
+  max-width: 33%;
+  max-height: 33%;
+  float: left;
+}
+
+.sponsors img {
+  margin: 5% 15%;
+  max-width: 70%;
+  max-height: 20%;
+}
+
+@media (min-width: 1000px) {
+  nav li {
+    display: inline-block;
+  }
+    
+  .top-info-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .schedule {
+    order: 1;
+  }
+
+  .sponsors {
+    order: 3;
+  }
+
+  .welcome {
+    order: 2;
+  }
+}
+
+@media (max-width: 999px) {
+ h1, h2, h3, {
+    font-size: 1.3em; 
+    padding: .1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  .schedule {
+    flex: none;
+  }
+
+  .sponsors {
+    flex: none;
+  }
+
+  .welcome {
+    flex: none;
+  }
+}
+
+.top-boxes:nth-child(1) {background-color: rgba(0, 0, 0, 0.20);}
+.top-boxes:nth-child(2) {background-color: rgba(0, 0, 0, 0.30);}
+.top-boxes:nth-child(3) {background-color: rgba(0, 0, 0, 0.40);}
+
+
+/*----------------------------------------
+              Home Page
+    Second Row Rules: Meets, Coaches, 
+               Contact
+----------------------------------------*/
+.call-outs-container {
+  max-width: 1300px;
+  margin: 2em auto 0 auto;
+}
+
+.call-out {
+  padding: .5em 2em;
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  flex-basis: 30%;
+}
+
+.meet-list a {
+  color: #ff6;
+  font-size: 1.3em;
+}
+
+.meet-list td {
+  max-width: 50%;
+}
+
+.meet-list td img {
+  max-width: 75%;
+}
+
+.meet-list tr {
+  justify-content: left;  
+}
+
+.coaches img {
+  margin: .2em auto;
+  border-radius: 25px;
+  max-width: 45%;
+  max-height: 50%;
+  float: right;
+}
+
+.contact-links td a img {
+  padding-left: 3em;
+  max-width: 3em;
+  max-height: 3em;
+}
+
+@media (min-width: 900px) {
+  .call-outs-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 899px) {
+  .coaches img {
+    max-width: 25%;
+    max-height: 40%;
+  }
+  /*Fixes issue with picture collapsing box*/
+  .clearfix:after {
+    content: "";
+    display: table; 
+    clear: both; 
+  }
+}
+.call-out:nth-child(1) {background-color: rgba(0, 0, 0, 0.45);}
+.call-out:nth-child(2) {background-color: rgba(0, 0, 0, 0.55);}
+.call-out:nth-child(3) {background-color: rgba(0, 0, 0, 0.60);}
+
+
+/*----------------------------------------
+            News & Records page
+----------------------------------------*/ 
+.column-layout, 
+.gallery, 
+.team-history {
+  max-width: 1350px;
+  margin: 2em auto;
+}
+
+.column,
+.image-scroll,
+.championships {
+  padding: .5em 2em 3em;
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  flex-basis: 48%;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.records, .champs {
+  margin: auto;
+}
+
+ol {
+  padding-left: 38%;
+}
+
+@media (min-width: 900px) {
+  .column-layout,
+  .gallery,
+  .team-history {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+/*------------------------------------------
+              Footer Styles
+------------------------------------------*/
+.footer {
+  width: 100%;
+  padding: .2em 0;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #000;
+}
